@@ -11,10 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(
-  cors({
-    origin: process.env.FRONTEND_URL,
-    credentials: true,
-  })
+  cors()
 );
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "https://yaseen-fz2m.vercel.app"); // Or '*' for any origin
